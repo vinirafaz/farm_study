@@ -1,9 +1,9 @@
-from fastapi import FastApi
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import routes
 
-app = FastApi()
+app = FastAPI()
 
 # CORS
 app.add_middleware(
@@ -15,7 +15,7 @@ app.add_middleware(
 
 
 
-@app.get("/")
+@app.get("/", tags=["index"])
 async def index():
     return {"message": "Welcome to the API"}
 
