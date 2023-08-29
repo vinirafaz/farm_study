@@ -13,8 +13,6 @@ app.add_middleware(
     allow_methods=["*"]
 )
 
-
-
 @app.get("/", tags=["index"])
 async def index():
     return {"message": "Welcome to the API"}
